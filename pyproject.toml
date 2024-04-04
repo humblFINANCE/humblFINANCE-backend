@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "humblfinance-backend"
+version = "0.0.0"
+description = "a FastAPI backend for the humblFINANCE web app"
+authors = ["jjfantini <jjman2811@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11.7,<3.12"
+fastapi = ">=0.104.1,<0.105.0"
+humbldata = "^1.2.0"
+alembic = "^1.13.1"
+sqlmodel = "^0.0.16"
+pydantic-settings = "^2.2.1"
+
+[tool.poetry.group.dev.dependencies]
+ruff = ">=0.1.6,<0.2.0"
+mypy = "^1.9.0"
+mkdocs = "^1.5.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
