@@ -7,11 +7,11 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.11.7,<3.12"
-fastapi = ">=0.104.1,<0.105.0"
-humbldata = "^1.2.0"
+humbldata = "^1.5.0"
 alembic = "^1.13.1"
 sqlmodel = "^0.0.16"
-pydantic-settings = "^2.2.1"
+fastapi = "^0.111.0"
+pydantic-settings = "^2.3.4"
 
 [tool.poetry.group.dev.dependencies]
 ruff = ">=0.1.6,<0.2.0"

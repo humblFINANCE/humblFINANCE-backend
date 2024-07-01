@@ -40,6 +40,8 @@ def run_migrations_offline() -> None:
     script output.
 
     """
+    # config_instance = Config()
+    # url = f"{config_instance.DB_ENGINE}://{config_instance.DB_USERNAME}:{config_instance.DB_PASS}@{config_instance.DB_HOST}:{config_instance.DB_PORT}/{config_instance.DB_NAME}"
     url = config.get_main_option("sqlalchemy.url")
     context.configure(
         url=url,
