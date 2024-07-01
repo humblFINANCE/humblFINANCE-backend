@@ -6,7 +6,7 @@ from .src.core.config import Config
 config = Config()
 app = FastAPI(title=config.PROJECT_NAME)
 
-app.include_router(user_table_router, prefix=config.API_V1_STR)
+app.include_router(user_table_router)
 
 @app.get("/")
 async def root():
