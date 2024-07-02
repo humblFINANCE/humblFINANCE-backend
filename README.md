@@ -24,19 +24,25 @@ humblFINANCE Backend is a FastAPI-based backend service for the humblFINANCE web
 ## 🚀 Getting Started
 
 1. Clone the repository
+   ```
+   git clone https://github.com/humblfinance/humblfinance-backend.git
+   ```
 2. Install dependencies:
    ```
    poetry install
    ```
 3. Set up your environment variables
+   ```
+   cp .env.example .env
+   ```
 4. Build and run the Docker container:
    ```
    docker build -t humblfinance-api .
-   docker run -p 8000:8000 humblfinance-api
+   docker run -p 8080:8080 humblfinance-api
    ```
 5. Alternatively, run the application directly:
    ```
-   uvicorn backend.main:app --host 0.0.0.0 --port 8000
+   uvicorn backend.main:app --host 0.0.0.0 --port 8080
    ```
 
 ## 🐳 Docker Support
