@@ -2,7 +2,7 @@ from fastapi import FastAPI
 
 # from .src.api.v1.user_table import router as user_table_router
 # from .src.core.config import Config
-from src.core.config import Config
+from .src.core.config import Config
 
 config = Config()
 # app = FastAPI(title=config.PROJECT_NAME)
