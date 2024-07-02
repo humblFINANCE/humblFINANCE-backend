@@ -19,12 +19,12 @@ RUN apt-get update && apt-get install -y \
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 ENV PATH="/root/.cargo/bin:${PATH}"
 
-COPY pyproject.toml poetry.lock* README.md Dockerfile .dockerignore alembic.ini /app/
+COPY pyproject.toml poetry.lock* README.md alembic.ini /app/
 
 # Install dependencies without pywry
 RUN pip install poetry && \
     poetry config virtualenvs.create false && \
-    poetry install --no-dev --no-interaction --no-ansi
+    poetry install --only main --no-interaction --no-ansi
 
 # Install pywry separately
 RUN pip install pywry==0.6.2
