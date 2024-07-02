@@ -31,8 +31,9 @@ RUN pip install pywry==0.6.2
 
 COPY backend /app/backend
 
-ARG WEB_CONCURRENCY
-ENV WEB_CONCURRENCY=${WEB_CONCURRENCY}
+# ARG WEB_CONCURRENCY
+# ENV WEB_CONCURRENCY=${WEB_CONCURRENCY}
 
 EXPOSE 8080
-CMD ["uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "8080"]
+# CMD ["uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "8080"]
+CMD ["fastapi", "run", "backend/main.py", "--host", "0.0.0.0", "--port", "8080"]

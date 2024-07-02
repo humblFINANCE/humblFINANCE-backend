@@ -43,6 +43,10 @@ humblFINANCE Backend is a FastAPI-based backend service for the humblFINANCE web
 5. Alternatively, run the application directly:
    ```
    uvicorn backend.main:app --host 0.0.0.0 --port 8080
+
+   ## OR ##
+
+   fastapi run backend/main.py --host 0.0.0.0 --port 8080
    ```
 
 ## 🐳 Docker Support
