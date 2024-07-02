@@ -1,6 +1,7 @@
 from fastapi import APIRouter
 from humbldata.portfolio.analytics.user_table.helpers import aggregate_user_table_data
-from src.core.config import Config
+
+from ....src.core.config import Config
 
 config = Config()
 
