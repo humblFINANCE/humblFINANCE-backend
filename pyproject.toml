@@ -1,23 +1,21 @@
 [tool.poetry]
 name = "humblfinance-backend"
-version = "0.0.0"
+version = "0.0.1"
 description = "a FastAPI backend for the humblFINANCE web app"
-authors = ["jjfantini <jjman2811@gmail.com>"]
+authors = ["jjfantini <jenningsfantini+github@gmail.com>"]
 readme = "README.md"
+packages = [
+    { include = "src", from = "backend" }
+]
 
 [tool.poetry.dependencies]
 python = ">=3.11.7,<3.12"
-fastapi = ">=0.104.1,<0.105.0"
-humbldata = "^1.2.0"
+humbldata = "^1.5.0"
 alembic = "^1.13.1"
 sqlmodel = "^0.0.16"
-pydantic-settings = "^2.2.1"
-dependency-injector = "^4.41.0"
-uvicorn = "0.24"
-ujson = "^5.9.0"
-redis = "^5.0.4"
-celery = {extras = ["redis"], version = "^5.4.0"}
-asyncpg = "^0.29.0"
+fastapi = "^0.111.0"
+pydantic-settings = "^2.3.4"
+nest-asyncio = "^1.6.0"
 
 [tool.poetry.group.dev.dependencies]
 ruff = ">=0.1.6,<0.2.0"
