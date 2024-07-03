@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from humbldata.portfolio.analytics.user_table.helpers import aggregate_user_table_data
 
+# from humbldata.portfolio.analytics.user_table.helpers import aggregate_user_table_data
 from .src.core.config import Config
 
 # Setup API Configuration
@@ -19,11 +19,11 @@ async def root():
 async def health_check():
     return {"status": "healthy"}
 
-@app.get("/user-table")
-async def user_table_route():
-    user_table_data = (await aggregate_user_table_data(symbols=["XLU", "XLE", "AAPL"])).collect().to_dict(as_series=False)
+# @app.get("/user-table")
+# async def user_table_route():
+#     user_table_data = (await aggregate_user_table_data(symbols=["XLU", "XLE", "AAPL"])).collect().to_dict(as_series=False)
 
-    return user_table_data
+#     return user_table_data
 
 
 # if __name__ == "__main__":
